@@ -12,6 +12,8 @@ gem 'rails', '~> 5.0.6'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+# Use Devise for security and authentication
+gem 'devise', '~> 4.3'
 # Use Bootstrap, not sassy ass SASS
 gem 'bootstrap', '~> 4.0.0.beta'
 # Use SCSS for stylesheets
