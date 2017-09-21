@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-md-6">
+		<h1>All Restaurant Reviews</h1>
+	</div>
+	<div class="col-md-6">
+		<%= link_to "Write A Review!", new_post_path, class: 'btn btn-primary right' %>
+	</div>
+</div>
+
+<% @posts.each do |post| %>
+<div class="jumbotron">
+    <h2 class="card-title"><%= link_to post.title, post_path(post) %></h2>
+    <p class="card-text"><%= post.body %></p>
+
+</div>
+<% end %>

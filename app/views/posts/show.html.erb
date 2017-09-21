@@ -1,0 +1,16 @@
+<div class="col-md-3">
+	IMAGES TEMPLATE!!!
+</div>
+<div class="col-md-9">
+	<div class="row">
+		<h4 class="col-md-4"><%= @post.title %></h4>
+		<%= link_to "Edit A Review!", edit_post_path(@post), class: 'btn btn-success' %>
+    <%= link_to "Delete A Review", post_path(@post), method: :delete, data: {confirm: "Are You Sure?"}, class: 'btn btn-danger' %>
+	</div>
+	<br>
+	<div class="row">
+		<p><%= @post.body %></p>
+	</div>
+</div>
+
+<%= link_to "Back to Reviews", root_path %>
