@@ -3,7 +3,9 @@
 		<h1>All Restaurant Reviews</h1>
 	</div>
 	<div class="col-md-6">
+		<% if user_signed_in? %>
 		<%= link_to "Write A Review!", new_post_path, class: 'btn btn-primary right' %>
+		<% end %>
 	</div>
 </div>
 
@@ -11,6 +13,5 @@
 <div class="jumbotron">
     <h2 class="card-title"><%= link_to post.title, post_path(post) %></h2>
     <p class="card-text"><%= post.body %></p>
-
 </div>
 <% end %>

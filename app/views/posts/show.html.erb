@@ -4,8 +4,10 @@
 <div class="col-md-9">
 	<div class="row">
 		<h4 class="col-md-4"><%= @post.title %></h4>
+		<% if user_signed_in? %>
 		<%= link_to "Edit A Review!", edit_post_path(@post), class: 'btn btn-success' %>
-    <%= link_to "Delete A Review", post_path(@post), method: :delete, data: {confirm: "Are You Sure?"}, class: 'btn btn-danger' %>
+    	<%= link_to "Delete A Review", post_path(@post), method: :delete, data: {confirm: "Are You Sure?"}, class: 'btn btn-danger' %>
+    	<% end %>
 	</div>
 	<br>
 	<div class="row">
