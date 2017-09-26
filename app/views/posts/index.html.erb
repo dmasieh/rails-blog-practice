@@ -1,8 +1,8 @@
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-8">
 		<h1>All Restaurant Reviews</h1>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-4">
 		<% if user_signed_in? %>
 		<%= link_to "Write A Review!", new_post_path, class: 'btn btn-primary right' %>
 		<% end %>
@@ -11,7 +11,14 @@
 
 <% @posts.each do |post| %>
 <div class="jumbotron">
-    <h2 class="card-title"><%= link_to post.title, post_path(post) %></h2>
-    <p class="card-text"><%= post.body %></p>
+	<div class="row">
+		<div class="col-md-4">
+			<%= image_tag(post.image.url(:thumb)) if post.image? %>
+		</div>
+		<div class="col-md-8">
+    	<h2 class="card-title"><%= link_to post.title, post_path(post) %></h2>
+    	<p class="card-text"><%= post.body %></p>
+    	</div>
+    </div>
 </div>
 <% end %>

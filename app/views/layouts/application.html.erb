@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Alfood | Alfred Food Reviews</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' %>
+
+    <%= stylesheet_link_tag 'https://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/narrow-jumbotron.css' %>
     
   </head>
 
@@ -19,13 +21,17 @@
           <% end %>
           
        <% end %>
-    <%= yield %>
+      <%= yield %>
+      <br>
+      <footer class="footer">
+        <p>&copy; Alfood Food Reviews 2017</p>
+      </footer>
     </div>
-    <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js' %>
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.1.1.slim.min.js' %>
 
-    <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js' %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js' %>
 
-    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' %>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js' %>
 
     <%= javascript_include_tag "application" %>
   </body>
