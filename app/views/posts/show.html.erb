@@ -7,7 +7,7 @@
 		<br>
 		<p><%= @post.body %></p>
 		<br>
-		<% if user_signed_in? %>
+		<% if user_signed_in? && @post.user_id == current_user.id%>
 		<%= link_to "Edit A Review!", edit_post_path(@post), class: 'btn btn-success' %>
     	<%= link_to "Delete A Review", post_path(@post), method: :delete, data: {confirm: "Are You Sure?"}, class: 'btn btn-danger' %>
     	<% end %>
